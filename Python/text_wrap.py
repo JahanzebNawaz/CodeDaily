@@ -6,6 +6,7 @@ import textwrap
 class Solution:
 
     def wrap(self, string, max_width):
+        # wrod wrap, textwrap package helps us to wrap the sentence
         a = textwrap.fill(string, max_width)
         return a
 
