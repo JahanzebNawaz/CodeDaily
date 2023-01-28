@@ -4,10 +4,10 @@ from unittest import TestCase
 
 class Solution:
     def solve(self, s):
-        words = s.split()
-        words = [x.capitalize() for x in words]
-        word = ' '.join(words)
-        return word
+        temp = s.split()
+        for word in temp:
+            s = s.replace(word, word.capitalize())
+        return s
 
 
 class TestSolution(TestCase):
