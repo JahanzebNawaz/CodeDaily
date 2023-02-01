@@ -6,16 +6,12 @@ import re
 class Solution:
 
     def is_valid_credit_card(self, number):
-        # check if it starts with 4, 5 or 6
         if not re.match(r'^[4-6]', number):
             return False
-        # check if it contains exactly 16 digits
         if not re.match(r'^\d{16}$|^(\d{4}-){3}\d{4}$', number):
             return False
-        # check if it only contains digits
         if not re.match(r'^\d+$', number.replace("-", "")):
             return False
-        # check if it does not have 4 or more consecutive repeated digits
         if re.search(r'(\d)\1{3,}', number.replace("-", "")):
             return False
         return True

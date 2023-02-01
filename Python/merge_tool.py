@@ -4,7 +4,6 @@ from unittest import TestCase
 
 class Solution:
     def merge_the_tools(self, string, k):
-    # your code goes here
         if k == 1:
             for x in string:
                 print(x)
